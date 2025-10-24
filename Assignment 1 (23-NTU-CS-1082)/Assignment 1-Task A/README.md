@@ -33,13 +33,13 @@ Enables smooth fading effects and variable intensity.
 
 ##  LED Modes
 
-| Mode | Description |
-|------|--------------|
-| 0 | All LEDs OFF |
-| 1 | Alternate LED blinking sequence |
-| 2 | All LEDs ON |
-| 3 | PWM Fade (Cross-fade between LEDs) |
-
+| Mode | Description                      |
+|------|----------------------------------|
+| 0    | All LEDs OFF                     |
+| 1    | Alternate LED blinking sequence  |
+| 2    | All LEDs ON                      |
+| 3    | PWM Fade(Cross-fade between LEDs)|
+ 
 ##  Features
 
 - Uses Adafruit SSD1306 OLED library for clear UI.  
@@ -54,25 +54,32 @@ Enables smooth fading effects and variable intensity.
 
 ## Pin Configuration (Pin Map)
 
-| Component        | ESP32Pin| Description                 |
+| Component        | ESP32 Pin | Description                 |
+|------------------|-----------|-----------------------------|
+| LED 1            | GPIO 25   | Controlled by PWM Channel 0 |
+| LED 2            | GPIO 26   | Controlled by PWM Channel 1 |
+| LED 3            | GPIO 33   | Controlled by PWM Channel 2 |
+| Button 1 (MODE)  | GPIO 14   | Changes LED mode            |
+| Button 2 (RESET) | GPIO 27   | Resets to OFF mode          |
+| OLED SDA         | GPIO 21   | I²C Data line               |
+| OLED SCL         | GPIO 22   | I²C Clock line              |
+| VCC              | 3.3V      | Power supply                |
+| GND              | GND       | Ground                      |
 
-| LED 1            | GPIO 25 | Controlled by PWM Channel 0 |
-| LED 2            | GPIO 26 | Controlled by PWM Channel 1 |
-| LED 3            | GPIO 33 | Controlled by PWM Channel 2 |
-| Button 1 (MODE)  | GPIO 14 | Changes LED mode            |
-| Button 2 (RESET) | GPIO 27 | Resets to OFF mode          |
-| OLED SDA         | GPIO 21 | I²C Data line               |
-| OLED SCL         | GPIO 22 | I²C Clock line              |
-| VCC              | 3.3V    | Power supply                |
-| GND              | GND     | Ground                      |
 
 ##  Screenshots
-Include these inside the `/screenshots/` folder in repository:
-1. OLED showing “System Ready”  
-2. Mode 0 – All LEDs OFF  
-3. Mode 1 – Alternate Blink  
-4. Mode 2 – All LEDs ON  
-5. Mode 3 – PWM Fade (with brightness bar on OLED)
+
+### Mode 0 – All LEDs OFF
+![Mode 0 – All LEDs OFF](screenshots/Mode0.png)
+
+### Mode 1 – Alternate Blink
+![Mode 1 – Alternate Blink](screenshots/Mode1.png)
+
+### Mode 2 – All LEDs ON
+![Mode 2 – All LEDs ON](screenshots/Mode2.png)
+
+### Mode 3 – PWM Fade (with brightness bar on OLED)
+![Mode 3 – PWM Fade](screenshots/Mode3.png)
 
 ## OLED display
-Include this in the `/screenshots/` folder in repository.
+![OLED Display](screenshots/OLEDDisplay.png)

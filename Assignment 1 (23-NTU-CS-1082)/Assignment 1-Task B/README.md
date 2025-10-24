@@ -17,17 +17,18 @@ The OLED shows real-time updates such as “Short Press Detected” or “Long P
 
 ##  Pin Map (ESP32 Connections)
 
-| Component   | Function  | ESP32 Pin | Notes                     |
+| Component   | Function  | ESP32 Pin| Notes                      |
+|-------------|-----------|----------|----------------------------|
+| LED1        | Output    | 25       | Turns ON/OFF with button   |
+| LED2        | Output    | 27       | Turns ON/OFF with button   |
+| LED3        | Output    | 33       | Turns ON/OFF with button   |
+| Buzzer      | Output    | 26       | Plays tone on long press   |
+| Push Button | Input     | 14       | Active LOW, detects press  |
+| OLED SDA    | I2C Data  | 21       | Data line                  |
+| OLED SCL    | I2C Clock | 22       | Clock line                 |
+| OLED VCC    | Power     | 3.3V     | Power supply               |
+| OLED GND    | Ground    | GND      | Common ground              |
 
-| LED1        | Output    | 25       | Turns ON/OFF with button  |
-| LED2        | Output    | 27       | Turns ON/OFF with button  |
-| LED3        | Output    | 33       | Turns ON/OFF with button  |
-| Buzzer      | Output    | 26       | Plays tone on long press  |
-| Push Button | Input     | 14       | Active LOW, detects press |
-| OLED SDA    | I2C Data  | 21       | Data line                 |
-| OLED SCL    | I2C Clock | 22       | Clock line                |
-| OLED VCC    | Power     | 3.3V     | Power supply              |
-| OLED GND    | Ground    | GND      | Common ground             |
 
 
 ##  Working Principle
@@ -38,10 +39,17 @@ The OLED shows real-time updates such as “Short Press Detected” or “Long P
 5. OLED display shows the detected press type and LED/buzzer status.
 
 ##  Screenshots
-Add the following in your `/screenshots/` folder:
-1. OLED showing “System Ready”  
-2. Short press message — “LEDs: ON”  
-3. Short press message — “LEDs: OFF”  
-4. Long press message — “Playing Buzzer...”  
-5. Circuit diagram from Wokwi  
 
+### Short Press detected 
+![LED ON](screenshots/Shortpressdetected.png)
+
+### Long Press detected — Playing Buzzer
+![Playing Buzzer](screenshots/Longpressdetected.png)
+
+## OLED Display
+
+### Long Press detected — Playing Buzzer
+![Playing Buzzer](screenshots/KitLongpressbuzzer.jpg)
+
+### Short Press detected 
+![Playing Buzzer](screenshots/KitShortpressdetected.jpg)
